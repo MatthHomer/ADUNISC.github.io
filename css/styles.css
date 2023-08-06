@@ -1,17 +1,19 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
-  --font-semi: 600;
+  --font-semi: 700;
+  --font-5: 600;
   /*===== Colores =====*/
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --second-color: #646464;
   /*===== Fuente y tipografia =====*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Red Hot Display', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
@@ -112,9 +114,10 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  background-color: #EDEDED;
+  border-bottom: 1px solid #C8C8C8; 
 }
+
 
 /*===== NAV =====*/
 .nav {
@@ -144,7 +147,7 @@ img {
 
 .nav__link {
   position: relative;
-  color: #fff;
+  color: #ffff;
 }
 
 .nav__link:hover {
@@ -155,10 +158,10 @@ img {
   position: absolute;
   content: '';
   width: 100%;
-  height: 0.18rem;
+  height: 0.12rem;
   left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
+  top: 1.6rem;
+  background-color: var(--second-color);
 }
 
 .nav__logo {
@@ -176,10 +179,10 @@ img {
   position: absolute;
   content: '';
   width: 100%;
-  height: 0.18rem;
+  height: 0.17rem;
   left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
+  top: 1.6rem;
+  background-color: var(--second-color);
 }
 
 /*=== Show menu ===*/
@@ -189,9 +192,7 @@ img {
 
 /*===== HOME =====*/
 .home {
-  position: relative;
-  row-gap: 5rem;
-  padding: 4rem 0 5rem;
+  padding-top: 10px;
 }
 
 .home__data {
@@ -238,19 +239,34 @@ img {
   width: 360px;
 }
 
-/*BUTTONS*/
-.button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: .75rem 2.5rem;
-  font-weight: var(--font-semi);
-  border-radius: .5rem;
-  transition: .3s;
+.banner-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.button:hover {
+.banner {
+  height: auto;
+}
+
+.button_event {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  border-bottom: 2px solid #969696; 
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: #EDEDED;
+  color: #969696;
+  padding: 1rem 3.7rem;
+  border-radius: 1.6rem;
+  font-weight: var(--font-5);
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button_event:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* ===== ABOUT =====*/
@@ -410,7 +426,7 @@ img {
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
-    row-gap: 2rem;
+    padding-top: 10px;
   }
   .home__img {
     width: 200px;
@@ -419,7 +435,7 @@ img {
 
 @media screen and (min-width: 576px) {
   .home {
-    padding: 4rem 0 2rem;
+    padding-top: 10px;
   }
   .home__social {
     padding-top: 0;
@@ -492,7 +508,7 @@ img {
     color: var(--second-color);
   }
   .home {
-    padding: 8rem 0 2rem;
+    padding-top: 10px;
   }
   .home__img {
     width: 400px;
@@ -522,7 +538,7 @@ img {
     margin-right: auto;
   }
   .home {
-    padding: 10rem 0 2rem;
+    padding-top: 10px;
   }
   .home__img {
     width: 450px;

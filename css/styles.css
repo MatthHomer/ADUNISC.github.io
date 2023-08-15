@@ -375,6 +375,29 @@ img {
 }
 
 /* ===== CONTACT =====*/
+
+/* Resto do seu CSS... */
+
+.contact__container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adicione um espaçamento entre a imagem e o formulário */
+}
+
+.contact__image {
+  max-width: 100%;
+  width: 200px; /* Ajuste a largura da imagem conforme necessário */
+  border-radius: 0.5rem; /* Adicione um canto arredondado à imagem */
+}
+
+.contact__form {
+  width: 100%; /* Certifique-se de que o formulário ocupa o restante do espaço */
+  /* Seus estilos para o formulário... */
+}
+
+/* Resto do seu CSS... */
+
+
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
@@ -421,6 +444,28 @@ img {
 
 .footer__copy {
   font-size: var(--smaller-font-size);
+}
+
+/* Add these styles */
+.work__images-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add 10px gap between the images */
+  height: 500px;
+  width: 361px;
+}
+
+.work__image-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add 10px gap between the images */
+  justify-content: center;
+  align-items: center;
+}
+
+.work__img-tall img {
+  height: 500px; /* Adjust the height as needed */
+  width: 350px;
 }
 
 /* ===== MEDIA QUERIES=====*/
